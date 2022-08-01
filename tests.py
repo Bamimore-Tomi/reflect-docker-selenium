@@ -21,6 +21,6 @@ login_button = driver.find_element(By.ID,"login-button")
 username.send_keys("standard_user")
 username.send_keys("secret_sauce")
 login_button.click()
-print(driver.current_url())
-assert driver.current_url()=="https://www.saucedemo.com/inventory.html"
+print(driver.current_url)
+assert driver.current_url=="https://www.saucedemo.com/inventory.html"
 driver.quit()
