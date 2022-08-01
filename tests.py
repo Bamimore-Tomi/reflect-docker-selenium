@@ -1,5 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+
 # Define options for running the chromedriver
 chrome_options = Options()
 chrome_options.add_argument("--no-sandbox")
@@ -13,9 +15,9 @@ chrome_prefs["profile.default_content_settings"] = {"images": 2}
 driver = webdriver.Chrome(options=chrome_options)
 
 driver.get('https://www.saucedemo.com/')
-username = driver.find_element_by_id("user-name")
-password = driver.find_element_by_id("password")
-login_button = driver.find_element_by_id("login-button")
+username = driver.find_element(By.ID,"user-name")
+password = driver.find_element(By.ID,"password")
+login_button = driver.find_element(By.ID,"login-button")
 username.send_keys("standard_user")
 username.send_keys("secret_sauce")
 login_button.click()
