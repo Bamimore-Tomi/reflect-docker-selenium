@@ -17,6 +17,7 @@ RUN echo $(whereis chromedriver)
 ENV DISPLAY=:99
 
 # install selenium
-RUN pip install selenium==3.8.0
+RUN pip install selenium==4.3.0
+
 COPY . .
 CMD python tests.py
