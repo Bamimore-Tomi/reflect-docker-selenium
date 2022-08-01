@@ -10,6 +10,6 @@ chrome_options.experimental_options["prefs"] = chrome_prefs
 chrome_prefs["profile.default_content_settings"] = {"images": 2}
 driver = webdriver.Chrome(options=chrome_options)
 
-driver.get('www.google.com')
+driver.get('https://www.google.com/')
 screenshot = driver.save_screenshot('test.png')
 driver.quit()
